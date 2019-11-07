@@ -15,8 +15,8 @@ app.get('/about',(req,res) => {
 const secret = 'kadederklin78';
 const hash = crypto.createHmac('sha256',secret).update('I love linuxacademy').digest('hex');
 
-app.get('/secret',(res,req) => {
-        res.send('Here is the secret: ' + hash);
+app.get('/secret',(req,res) => {
+        res.send('here is my secret: ' + hash);
 });
 app.listen(PORT,HOST);
 console.log(`Running on https://${PORT}:{host}`);
