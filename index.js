@@ -7,7 +7,7 @@ const PORT = 7800;
 const HOST = '0.0.0.0';
 
 app.get('/', (req, res) => {
-	res.send('Hello Node Docker from github cicd');
+	res.send('Hello Node Docker from github jenkins cicd');
 });
 
 app.get('/info', (req, res) => {
