@@ -7,7 +7,7 @@ const PORT = 8080;
 const HOST = '0.0.0.0';
 
 app.get('/', (req, res) => {
-	res.send('Hello Node Docker');
+	res.send('Hello Node Docker from github cicd');
 });
 app.get('/about',(req,res) => {
         res.send('This is BFK-Solutions that focus on training kids in special need');
