@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/info', (req, res) => {
-        res.send('Admin infomation: Abdul Kade Salim');
+        res.send('Admin infomation: Abdul Kade');
 });
 app.get('/about',(req,res) => {
         res.send('This is BFK-Solutions that focus on training kids in special need');
