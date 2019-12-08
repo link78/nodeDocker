@@ -9,6 +9,10 @@ const HOST = '0.0.0.0';
 app.get('/', (req, res) => {
 	res.send('Hello Node Docker from github cicd');
 });
+
+app.get('/info', (req, res) => {
+        res.send('Admin infos: Abdul Kade');
+});
 app.get('/about',(req,res) => {
         res.send('This is BFK-Solutions that focus on training kids in special need');
 });
