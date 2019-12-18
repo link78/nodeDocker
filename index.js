@@ -11,11 +11,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/info', (req, res) => {
-        res.send('Admin infomation: Monde Jnagula');
+        res.send('Admin infomation: Monde W Jangula');
 });
 
-app.get('/info/version', (req, res) => {
-        res.send('Nodejs App version: v1.0');
+app.get('/version', (req, res) => {
+        res.send('Nodejs App version: v2.0');
 });
 app.get('/about',(req,res) => {
         res.send('This is BFK-Solutions that focus on training kids in special need');
