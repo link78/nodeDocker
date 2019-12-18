@@ -7,14 +7,14 @@ const PORT = 7800;
 const HOST = '0.0.0.0';
 
 app.get('/', (req, res) => {
-	res.send('Hello Node Docker from github jenkins cicd');
+	res.send('Hello Nodejs aws devops from github jenkins cicd');
 });
 
 app.get('/info', (req, res) => {
         res.send('Admin infomation: Monde Jnagula');
 });
 
-app.get('/version', (req, res) => {
+app.get('/info/version', (req, res) => {
         res.send('Nodejs App version: v1.0');
 });
 app.get('/about',(req,res) => {
