@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/info', (req, res) => {
-        res.send('Admin infomation: Abdoul D Kade');
+        res.send('Admin infomation: Abdoul D Derk');
 });
 
 app.get('/version', (req, res) => {
