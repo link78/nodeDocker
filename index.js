@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
 app.get('/info', (req, res) => {
         res.send('Admin infomation: Abdoul D Kade');
 });
+
+app.get('/version', (req, res) => {
+        res.send('Nodejs App version: v1.0');
+});
 app.get('/about',(req,res) => {
         res.send('This is BFK-Solutions that focus on training kids in special need');
 });
