@@ -11,5 +11,7 @@ cd /home/ec2-user
 wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
+sudo mkdir -p /var/www/nodejs
+cd /var/www/nodejs
 npm install
-sudo mkdir -p /var/www/nodejs # directory located on appspec.yml
+sudo node index.js
