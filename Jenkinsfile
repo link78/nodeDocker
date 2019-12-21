@@ -9,9 +9,9 @@ docker.withRegistry('https://registry.hub.docker.com','burk1212') {
         }
      
   stage('Remove Unused docker images'){
-    steps{
+    
       sh "docker rmi $dockerRegistry:$BUILD_NUMBER"
-    }
+    
   }
  
 } // end
