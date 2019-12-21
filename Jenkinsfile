@@ -13,7 +13,7 @@ docker.withRegistry('https://registry.hub.docker.com','burk1212') {
      
   stage('Running latest images'){
     
-      sh label: '', script: 'docker run -d -p --name simple -d -p 7000:7800 burk1212/simplenodejs'
+      sh label: '', script: 'docker run --name=simple -d -p 7000:7800 burk1212/simplenodejs'
     
   }
  
