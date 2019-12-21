@@ -1,5 +1,7 @@
-node {
+pipeline {
   checkout scm
+  agent any
+  
   stage('Pushing Image'){
          // This step should not normally be used in your script. Consult the inline help for details.
 docker.withRegistry('https://registry.hub.docker.com','burk1212') {
