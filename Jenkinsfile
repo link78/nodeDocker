@@ -18,7 +18,7 @@ docker.withRegistry('https://registry.hub.docker.com','burk1212') {
   }
  
   stage('Running image on k8s'){
-  sh label: '', script: '''kubectl create deployment simplenodejs --image burk1212/simplenodejs
+  sh label: '', script: '''kubectl create deployment simplenodejs --image=burk1212/simplenodejs
 kubectl expose deployment/simplenodejs --port=80 --name=nodejs-svc --type=LoadBalancer'''
   }
  
