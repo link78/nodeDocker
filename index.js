@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/info', (req, res) => {
-        res.send('Admin infomation: Abdoul K Koanda');
+        res.send('Admin infomation: Abdoul  Koanda');
 });
 
 app.get('/version', (req, res) => {
