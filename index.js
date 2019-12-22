@@ -15,7 +15,7 @@ app.get('/info', (req, res) => {
 });
 
 app.get('/version', (req, res) => {
-        res.send('Nodejs App version: v3.0');
+        res.send('Nodejs App version: v2.0');
 });
 app.get('/about',(req,res) => {
         res.send('This is BFK-Solutions that focus on training kids in special need');
