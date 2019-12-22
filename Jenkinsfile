@@ -2,7 +2,7 @@ node {
   checkout scm
  
   
-  stage('Pushing Image'){
+  stage('Building and Pushing Image'){
          // This step should not normally be used in your script. Consult the inline help for details.
 docker.withRegistry('https://registry.hub.docker.com','Burk1212') {
   IMAGE_NAME="burk1212/simplenodejs:${BUILD_NUMBER}"
