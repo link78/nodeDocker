@@ -11,11 +11,11 @@ docker.withRegistry('https://registry.hub.docker.com','Burk1212') {
     customImage.push()
         }
   }
-     //stage('Remove old image container'){
+     stage('Remove old image container'){
     
-     // sh label: '', script: 'docker rm -f simple' 
+      sh label: '', script: 'docker rm -f simple' 
       
- // }
+  }
   stage('Running latest images on docker'){
     
       sh label: '', script: 'docker run --name=simple -d -p 7000:7800 burk1212/simplenodejs' 
