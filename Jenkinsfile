@@ -13,7 +13,7 @@ docker.withRegistry('https://registry.hub.docker.com','Burk1212') {
   }
      stage('Remove old image container'){
     
-     // sh label: '', script: 'docker rm -f simple' 
+      sh label: '', script: 'docker rm -f simple' 
       
   }
   stage('Running latest images on docker'){
