@@ -3,3 +3,11 @@ os: linux
 files:
   - source: /
     destination: /var/www/nodejs
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
+    - location: scripts/start_app
+      timeout: 300
+      runas: root
