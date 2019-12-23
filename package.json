@@ -4,11 +4,12 @@
   "description": "node js with docker",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "kade k",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+     "nodemon": "^1.19.1"
   }
 }
