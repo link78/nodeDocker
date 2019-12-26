@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:carbon'
-      args '-p 7800:7800'
-    }
-
-  }
+  agent any
   stages {
     stage('Building App') {
       steps {
