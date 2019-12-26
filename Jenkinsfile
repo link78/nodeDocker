@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Building App') {
       steps {
-        sh 'npm install nodemon'
+        sh '''sudo chown -R 985:977 "/.npm"
+'''
         sh 'npm install'
       }
     }
