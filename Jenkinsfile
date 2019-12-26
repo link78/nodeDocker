@@ -11,11 +11,12 @@ pipeline {
     stage('Build docker image') {
       steps {
         echo 'Testing nodejs -app'
-        sh '''withDockerRegistry(credentialsId: \'DOCKER_ID\', url: \'https://registry.hub.docker.com\') {
-    def customImage= docker.build("burk1212/test-nodejs-cicd:${env.BUILD_NUMBER}")
-    	          customImage.push()
-                  customImage.push("latest")
-}'''
+        sh '''docker.withRegistry(\'https://registry.hub.docker.com\',\'DOCKER_ID\') {
+  IMAGE_NAME="burk1212/simplenodejs-cicd:${env.BUILD_NUMBER}"
+  def customImage = docker.build(IMAGE_NAME)
+    
+    customImage.push("latest")
+        }'''
         }
       }
 
