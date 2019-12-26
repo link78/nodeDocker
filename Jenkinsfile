@@ -20,8 +20,11 @@ pipeline {
      stage('Push Image){
         steps{
         script {
-               docker.withRegistry('https://registry.hub.docker.com','DOCKER_ID') {
-                    def dockerImage = docker.push("latest")
+               docker.withRegistry('https://registry.hub.docker.com','docker_id') {
+               IMAGE_NAME="burk1212/simple-nodejs-cicd:${env.BUILD_NUMBER}"
+             def dockerImage = docker.build(IMAGE_NAME)
+                 dockerImage.push()
+        }
                 }
         }
   }
