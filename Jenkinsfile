@@ -9,9 +9,8 @@ pipeline {
   stages {
     stage('Building App') {
       steps {
-        sh '''sudo chown -R 985:977 "/.npm"
-'''
-        sh 'npm install'
+        sh 'node --version'
+        sh 'npm --version'
       }
     }
 
