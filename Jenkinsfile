@@ -8,13 +8,14 @@ pipeline {
       }
     }
 
-    stage('Build docker image') {
+    stage('Build AND Push docker image') {
       steps {
         scripts {
-        docker.withRegistry('https://registry.hub.docker.com',"DOCKER_ID') {
-               def customImage= docker.build("burk1212/test-nodejs-cicd:${env.BUILD_NUMBER}")
-    	          customImage.push()
-                  customImage.push("latest")
+        docker.withRegistry('https://registry.hub.docker.com','DOCKER_ID') {
+               IMAGE_NAME="burk1212/simplenodejs:${env.BUILD_NUMBER}"
+               def customImage = docker.build(IMAGE_NAME)
+                    customImage.push("latest")
+        }
              } // end of docker build
         }
       }
