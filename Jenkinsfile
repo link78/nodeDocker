@@ -10,11 +10,11 @@ node {
           customImage.push("latest")
         }
   }
-  //   stage('Remove old image container'){
+    stage('Remove old image container'){
     
-     // sh label: '', script: 'docker rm -f simple' 
+     sh label: '', script: 'docker rm -f cicd' 
       
- // }
+ }
   stage('Running latest images on docker'){
     
       sh label: '', script: 'docker run --name=cicd -d -p 7000:7800 burk1212/simplenodejs' 
